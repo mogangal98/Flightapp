@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorAccent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment"
+    android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mailTextView"
+            android:text=""
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textAlignment="center"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/dataButton"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#C6BABA"
+            android:background="@drawable/airplane"
+            app:layout_constraintEnd_toEndOf="@id/mailTextView"
+            app:layout_constraintTop_toBottomOf="@id/mailTextView"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/countryButton"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:background="@drawable/select"
+            android:backgroundTint="#C6BABA"
+            app:layout_constraintEnd_toStartOf="@id/dataButton"
+            app:layout_constraintStart_toEndOf="@id/logoutButton"
+            app:layout_constraintTop_toBottomOf="@id/mailTextView"/>
+
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/logoutButton"
+            android:background="@drawable/logout"
+            android:textAllCaps="false"
+            android:layout_marginStart="40dp"
+            android:textSize="18sp"
+            android:backgroundTint="#C6BABA"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mailTextView"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:text=""
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/logoutButton"
+            app:layout_constraintTop_toBottomOf="@id/logoutButton"/>
+
+        <GridLayout
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:columnCount="2"
+            android:rowCount="1"
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/textView"
+            app:layout_constraintTop_toBottomOf="@id/textView">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/gridLeft"
+                android:text=""
+                android:textColor="@color/white"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:id="@+id/gridRight"
+                android:text=""
+                android:textColor="@color/white"/>
+
+        </GridLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
